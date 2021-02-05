@@ -3,7 +3,7 @@ import sys
 def main(name):
 
     if  name == 'alice' or name == 'jens':
-        print ("hollo " + name)
+        print ("hello " + name)
     
     else:
         print('You are not real')

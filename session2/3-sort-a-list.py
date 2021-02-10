@@ -21,7 +21,6 @@ lastLetterSort = sorted(listOfNames, key= lambda x: x[-1])
 print(f"Sorted list of names by last letter: {lastLetterSort}")
 
 def get_id_of_first_instance(x):
-    print(x)
     index1 = x.find("a")
     index2 = x.find("A")
     if (index1 != -1 and index2 != -1):

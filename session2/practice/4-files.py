@@ -9,12 +9,12 @@
 from typing import TextIO
 
 
-songs_dox = "files/songs.docx"
+songs_dox = "../files/songs.docx"
 
 def separator(text):
     print(f"\n#----- Reading from songs.docx with {text} -----#\n")
 
-lyricsFile = open("files/lyrics.txt", "w+")
+lyricsFile = open("../files/lyrics.txt", "w+")
 print("lyrics.txt has been created in folder files,"
     "any previous data has been deleted")
 lyricsFile.close()

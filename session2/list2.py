@@ -11,8 +11,12 @@
 
 
 def remove_adjacent(nums):
-    # +++your code here+++
-    return
+    for index, x in enumerate(nums):
+        count = nums.count(x)
+        while (count > 1):
+            nums.pop(index)
+            count -= 1    
+    return tuple(nums)
     
 
 # E. Given two lists sorted in increasing order, create and return a merged
@@ -20,8 +24,8 @@ def remove_adjacent(nums):
 # Ideally, the solution should work in "linear" time, making a single
 # pass of both lists.
 def linear_merge(list1, list2):
-    # +++your code here+++
-   return
+    list_sorted = sorted(list1+list2)
+    return list_sorted
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)
 # is not constant time with the standard python list implementation, so
@@ -48,6 +52,7 @@ def main():
     print('remove_adjacent')
     test(remove_adjacent([1, 2, 2, 3]), (1, 2, 3))
     test(remove_adjacent([2, 2, 3, 3, 3]), (2, 3))
+    test(remove_adjacent([2,2,2,3,3,3,3,5,5,5,5,5]), (2,3,5))
     test(remove_adjacent([]), ())
 
     print()

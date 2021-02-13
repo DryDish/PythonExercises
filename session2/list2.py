@@ -10,13 +10,12 @@
 # modify the passed in list.
 
 
-def remove_adjacent(nums):
+def remove_adjacent(nums): 
+    numbers = []
     for index, x in enumerate(nums):
-        count = nums.count(x)
-        while (count > 1):
-            nums.pop(index)
-            count -= 1    
-    return tuple(nums)
+            if nums[index] != nums[index-1]:
+                numbers.append(x)
+    return tuple(numbers)
     
 
 # E. Given two lists sorted in increasing order, create and return a merged

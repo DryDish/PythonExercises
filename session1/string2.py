@@ -13,16 +13,16 @@
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-  if len(s) < 3:
-    return s
-  
-  suffix1= 'ing'
-  suffix2 = 'ly'
-  
-  if s.endswith(suffix1):
-    return f'{s}{suffix2}'
-  else:
-    return f'{s}{suffix1}'
+    if len(s) < 3:
+        return s
+
+    suffix1 = 'ing'
+    suffix2 = 'ly'
+
+    if s.endswith(suffix1):
+        return f'{s}{suffix2}'
+    else:
+        return f'{s}{suffix1}'
 
 
 # E. not_bad
@@ -34,16 +34,15 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-  word1 = s.find('not')
-  word2 = s.find('bad')
-  if word1>word2 or word1 == -1 or word2 == -1:
-    return s
+    word1 = s.find('not')
+    word2 = s.find('bad')
+    if word1 > word2 or word1 == -1 or word2 == -1:
+        return s
 
-  string1 = s[:word1]
-  string2 = s[word2+3:] #three is the length of the word
+    string1 = s[:word1]
+    string2 = s[word2+3:]  # three is the length of the word
 
-  return f'{string1}good{string2}'
-  
+    return f'{string1}good{string2}'
 
 
 # F. front_back
@@ -54,42 +53,43 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-  print(a + ' ' + b)
-  aFront =round(len(a)/2+.1)
-  bFront =round(len(b)/2+.1)
+    print(a + ' ' + b)
+    aFront = round(len(a)/2+.1)
+    bFront = round(len(b)/2+.1)
 
-  return f'{a[0:aFront]}{b[0:bFront]}{a[aFront:]}{b[bFront:]}'  
+    return f'{a[0:aFront]}{b[0:bFront]}{a[aFront:]}{b[bFront:]}'
 
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
-  if got == expected:
-    prefix = ' OK '
-  else:
-    prefix = '  X '
-  print (prefix + ' got: ' + got + ' expected: ' + expected)
+    if got == expected:
+        prefix = ' OK '
+    else:
+        prefix = '  X '
+    print(prefix + ' got: ' + got + ' expected: ' + expected)
 
 
 # main() calls the above functions with interesting inputs,
 # using the above test() to check if the result is correct or not.
 def main():
-  print ('verbing')
-  test(verbing('hail'), 'hailing')
-  test(verbing('swiming'), 'swimingly')
-  test(verbing('do'), 'do')
+    print('verbing')
+    test(verbing('hail'), 'hailing')
+    test(verbing('swiming'), 'swimingly')
+    test(verbing('do'), 'do')
 
-  print()
-  print ('not_bad')
-  test(not_bad('This movie is not so bad'), 'This movie is good')
-  test(not_bad('This dinner is not that bad!'), 'This dinner is good!')
-  test(not_bad('This tea is not hot'), 'This tea is not hot')
-  test(not_bad("It's bad yet not"), "It's bad yet not")
+    print()
+    print('not_bad')
+    test(not_bad('This movie is not so bad'), 'This movie is good')
+    test(not_bad('This dinner is not that bad!'), 'This dinner is good!')
+    test(not_bad('This tea is not hot'), 'This tea is not hot')
+    test(not_bad("It's bad yet not"), "It's bad yet not")
 
-  print()
-  print ('front_back')
-  test(front_back('abcd', 'xy'), 'abxcdy')
-  test(front_back('abcde', 'xyz'), 'abcxydez')
-  test(front_back('Kitten', 'Donut'), 'KitDontenut')
+    print()
+    print('front_back')
+    test(front_back('abcd', 'xy'), 'abxcdy')
+    test(front_back('abcde', 'xyz'), 'abcxydez')
+    test(front_back('Kitten', 'Donut'), 'KitDontenut')
+
 
 main()

@@ -33,20 +33,6 @@ def match_ends(words):
 # before combining them.
 def front_x(words):
 
-     
-#     words_x = []
- #    i = 0
-  #   while i < len(words):
-   #       word = words[i]
-    #      if word[0] == "x":
-     #          word_stored = words.pop(words.index(word))
-      #         words_x.append(word_stored)
-       #   else:
-#        #       i += 1
- #    words = sorted(words)
-  #   words_x = sorted(words_x)
-   #  sorted_list = words_x + words
-
      words_x = []
      words_no_x = []
 

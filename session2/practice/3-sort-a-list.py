@@ -17,14 +17,15 @@ print(f"Invert+sorted list of names: {invertedSort}")
 lengthSort = sorted(listOfNames, key=len)
 print(f"Length sorted list of names: {lengthSort}")
 
-lastLetterSort = sorted(listOfNames, key= lambda x: x[-1])
+lastLetterSort = sorted(listOfNames, key=lambda x: x[-1])
 print(f"Sorted list of names by last letter: {lastLetterSort}")
+
 
 def get_id_of_first_instance(x):
     index1 = x.find("a")
     index2 = x.find("A")
     if (index1 != -1 and index2 != -1):
-        return min(index1,index2)
+        return min(index1, index2)
 
     if (index1 != -1):
         return index1
@@ -35,5 +36,5 @@ def get_id_of_first_instance(x):
     return 999
 
 
-byFirstA = sorted(listOfNames, key = get_id_of_first_instance)
+byFirstA = sorted(listOfNames, key=get_id_of_first_instance)
 print(f"Sorted list of names by first instance of a: {byFirstA}")

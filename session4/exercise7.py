@@ -13,3 +13,22 @@
 
 # You will have to use the requests module, the OS module
 #   and the subprocesses module for this task.
+
+import requests
+
+
+def main():
+    # url = input("Please type a url you would like to download:\n")
+    url = 'https://www.python.org'
+    try:
+        request = requests.get(url)
+        request.raise_for_status()
+    except requests.exceptions.ConnectionError:
+        print("Invalid URL, please try something else.")
+        return -1
+    print(request.status_code)
+
+    return 0
+
+
+main()

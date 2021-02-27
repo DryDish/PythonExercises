@@ -26,14 +26,14 @@ def initialize_folder_and_file(folder_name, file_name):
     os.mkdir(folder_name)          # make directory
     os.chdir(folder_name)          # navigate to new directory
     python_file_write = os.open(file_name, os.O_WRONLY | os.O_CREAT)
-    return python_file_write       # return a file descripor
+    return python_file_write       # return a file descriptor
 
 
 def write_to_file(file_name):
     print("Please type something cool to go in the file\n"
           "When you are done typing write \\p")
     text = ""
-    # keep saving input untill the escape sequence is found
+    # keep saving input until the escape sequence is found
     while (text.count('\\q') < 1):
         text += input()
         text += "\n"

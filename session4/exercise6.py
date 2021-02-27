@@ -84,6 +84,7 @@ def main(input):
         return 0
 
     if "--zip" in sys.argv:
+        zip_name = ""
         try:
             zip_name = sys.argv[-1]
         except Exception:
@@ -97,10 +98,15 @@ def main(input):
         if not (zip_name.endswith(".zip")):
             print("Please make sure your file name ends with the suffix .zip")
             return -1
-        exists = str([x for x in files if (x.find(zip_name) > -1)])
-        if (exists != "[]"):
-            print("file already exists, please chose a new file name")
-            return-1
+        try:
+            zip_file = ZipFile(str(zip_name), 'x')
+        except Exception:
+            os.remove(zip_file)
+            zip_file = ZipFile(str(zip_name), 'x')
+        # exists = str([x for x in files if (x.find(zip_name) > -1)])
+        # if (exists != "[]"):
+        #    print("file already exists, please chose a new file name")
+        #    return-1
         if sys.argv[2] == "--todir" and len(sys.argv) > 5:
             to_dir = sys.argv[3]
         else:
@@ -108,7 +114,6 @@ def main(input):
         print("from:", from_folder_name)
         print("to:", to_dir)
         print("zip name:", zip_name)
-        zip_file = ZipFile(str(zip_name), 'x')
         files = get_folder_contents_files(from_folder_name)
         print(files)
         for item in files:

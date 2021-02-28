@@ -1,6 +1,6 @@
 # Ex 4: Sys module exercise
 
-# Create a commandline tool that checks if the required aguments are
+# Create a commandline tool that checks if the required arguments are
 #   present when you run the program, and if not tells you what is
 #   missing to run the program.
 
@@ -27,7 +27,7 @@ def check_args(args):
         if args[1] != "-it":
             print(usage_info)
             return -1
-    print("succes!")
+    print("success!")
     return 0      # if we get here then great success!
 
 

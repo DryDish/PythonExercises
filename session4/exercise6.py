@@ -103,10 +103,6 @@ def main(input):
         except Exception:
             os.remove(zip_file)
             zip_file = ZipFile(str(zip_name), 'x')
-        # exists = str([x for x in files if (x.find(zip_name) > -1)])
-        # if (exists != "[]"):
-        #    print("file already exists, please chose a new file name")
-        #    return-1
         if sys.argv[2] == "--todir" and len(sys.argv) > 5:
             to_dir = sys.argv[3]
         else:

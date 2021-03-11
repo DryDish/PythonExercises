@@ -5,7 +5,7 @@ FROM python:3.8-alpine
 COPY ./pip-requirements.txt /
 
 # install python modules
-RUN pip install -r requirements.txt
+RUN pip install -r pip-requirements.txt
 
 # when container runs it should start in a ash terminal
 CMD ["ash"]

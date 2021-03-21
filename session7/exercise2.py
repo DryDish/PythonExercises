@@ -93,6 +93,11 @@ class Customer:
             raise ValueError("User must be above the age of 18!")
 
 
+try:
+    peter = Customer("peter", 16)
+except ValueError:
+    print("\t---- Customers Must be of age 18+! ----\n")
+
 peter = Customer("peter", 18)
 anders = Customer("Anders", 21)
 peter_account = Account(peter)

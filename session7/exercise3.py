@@ -99,3 +99,32 @@ try:  # it will crash if the printer is not powered
 except ConnectionError:
     print("You need to power on the machine before you can print.")
     print("You can do that by calling <printername>.toggle_power")
+
+
+class Papertray():
+    def __init__(self, text=""):
+        self.paper_list = [text]
+        self.current_paper = self.paper_list[0]
+
+    def load_paper(self, text=""):
+        self.current_paper = text
+        self.paper_list.append(self.current_paper)
+
+    def use_paper(self, pos=0):
+        self.current_paper = self.paper_list[pos % len(self.paper_list)]
+
+    @property
+    def paper_list(self):
+        return self.__paper_list
+
+    @property
+    def current_paper(self):
+        return self.__current_paper
+
+    @paper_list.setter
+    def paper_list(self, paper_list):
+        self.__paper_list = paper_list
+
+    @current_paper.setter
+    def current_paper(self, current_paper):
+        self.__current_paper = current_paper

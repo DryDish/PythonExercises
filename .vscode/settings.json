@@ -8,5 +8,6 @@
         "WRONLY",
         "todir",
         "tofolder"
-    ]
+    ],
+    "python.pythonPath": "/usr/bin/python3"
 }

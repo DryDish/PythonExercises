@@ -1,0 +1,14 @@
+
+docker run -it --rm -v ${PWD}:/docs python bash  // same as above, but now sharing files from the current directory to/from /docs folder in the container.
+docker build --tag image_namehere .
+docker run -it --rm -v ${PWD}:/docs image_namehere
+
+
+for updates:
+1. exit docker container 
+2. docker images 
+3. docker rmi docker_stuff - remove 
+4. go to folder with docker file 
+5. docker build --tag docker_stuff .      
+6. docker run -it --rm -v ${PWD}:/docs docker_stuff 
+7. done 

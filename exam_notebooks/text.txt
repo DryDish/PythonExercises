@@ -1,0 +1,4 @@
+Hello there, this is some sample text!
+What's it like reading this?
+Interesting isn't it?
+Well, bye now!

@@ -1,0 +1,39 @@
+1. Data Structures & functions
+
+In my exam presentation I will:
+
+    •Go over the different data structures in Python:
+        ◦List, Tuple, Set, Dictionary
+    •Go over comprehension for:
+        ◦List, Tuple and Set
+    •Give examples of List, Tuple and Set comprehension
+
+2. Pythonic OOP
+In my exam presentation for Pythonic OOP I will showcase:
+
+    • Classes
+        ◦ Creation and Instantiation
+    • Encapsulation
+        ◦ private, public
+        ◦ @properties, why and how to use them
+    • Data model
+
+3. Generators, Decorators & Context Managers
+For this I will present:
+
+    • Generators, Decorators and Context Managers:
+        ◦ what they are
+        ◦ when they are used
+        ◦ why they are used
+
+I will also showcase a use-case where all three can be used together
+
+4. Python modules and the python development environment.
+For this I will present:
+
+    • Pythons built in modules
+        ◦ OS, Sys
+    • Third-party modules
+        ◦ pip, requests
+    • Development environment
+        ◦ Docker, VS-code, python interpreter.
